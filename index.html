@@ -3,10 +3,9 @@
 <body>
 <head>
 <script language = "javascript">
-var randomNum = document.getElementById('randomNum').value;
 function NumInput()
 {
-   var inputNum = document.getElementById("Random Number").value;
+   var inputNum = document.getElementById("randomNum").value;
    document.getElementById("display").innerHTML = inputNum;
    var numArray = inputNum.split(" ").map(Number);
    for (i=0; i<5; i++) {
@@ -67,11 +66,11 @@ for (i = 0; i < 5; i++) {
 </form>
 
 <h4>Total Payout</h4>
-	<p><span id=display></span>
+	<p><span id="display"></span>
 		<br>
-		<span id=display2></span>
+		<span id="display2"></span>
 		<br>
-		<span id=display3></span>
+		<span id="display3"></span>
 	</p>
 		
 </body>
