@@ -83,17 +83,25 @@ for (i = 0; i < 5; i++) {
 <p>
 <span id="display5"></span>
 </p>
+<p>
+<span id="display6"></span>
+</p>
+<p>
+<span id="display7"></span>
+</p>
 <script language="javascript">
 var hotdogs = {name: "Hotdogs", price: 3.25};
 var fries = {name: "French Fries", price: 2.00};
 var drinks = {name: "Drinks", price: 1.50};
-var menu = {hotdogs, fries, drinks};
+var menu = [hotdogs, fries, drinks];
 document.getElementById("display4").innerHTML = hotdogs.price;
+document.getElementById("display5").innerHTML = menu[1];
 var hotdogsQuant = {name: "Hotdogs Ordered", amount: 0};
 var friesQuant = {name: "French Fries Ordered", amount: 0};
 var drinksQuant = {name: "Drinks Ordered", amount: 0};
 var Quantity = {hotdogsQuant, friesQuant, drinksQuant};
-document.getElementById("display5").innerHTML = friesQuant.name;
+document.getElementById("display6").innerHTML = hotdogsQuant.amount;
+document.getElementById("display7").innerHTML = Quantity[2];
 </script>
 
 </body>
