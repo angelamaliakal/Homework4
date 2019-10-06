@@ -4,31 +4,42 @@
 
 <h2>JavaScript Math</h2>
 
-<h4>Random Numbers between 1 and 48</h4>
-<p id="demo1"></p>
-<p id="demo2"></p>
-<p id="demo3"></p>
-<p id="demo4"></p>
-<p id="demo5"></p>
+<h4>Random Numbers between 1 and 48: Unsorted</h4>
 
-<h4>Lucky Ball Number between 1 and 18</h4>
-<p id="luckyBall"></p>
+<script language = "javascript">
+var demo1, demo2, demo3, demo4, demo5;
+demo1 = Math.floor(Math.random() * 47 + 1);
+demo2 = Math.floor(Math.random() * 47 + 1);
+demo3 = Math.floor(Math.random() * 47 + 1);
+demo4 = Math.floor(Math.random() * 47 + 1);
+demo5 = Math.floor(Math.random() * 47 + 1);
 
-<h4>Array of Numbers</h4>
+var numbers = [demo1, demo2, demo3, demo4, demo5];
+for (i = 0; i < 5; i++) {
+	document.write(numbers[i] + " ");
+}
 
-
-<script>
-document.getElementById("demo1").innerHTML = Math.floor(Math.random() * 47) + 1;
-document.getElementById("demo2").innerHTML = Math.floor(Math.random() * 47) + 1;
-document.getElementById("demo3").innerHTML = Math.floor(Math.random() * 47) + 1;
-document.getElementById("demo4").innerHTML = Math.floor(Math.random() * 47) + 1;
-document.getElementById("demo5").innerHTML = Math.floor(Math.random() * 47) + 1;
-document.getElementById("luckyBall").innerHTML = Math.floor(Math.random() * 17) + 1;
-
-numbers = new Array ("demo1", "demo2", "demo3", "demo4", "demo5", "luckyBall");
-for (i=0; i<numbers.length;i++) 
-	document.write(numbers[i]);
 </script>
+
+<h4>LuckyBall Number</h4>
+
+<script language = "javascript">
+var luckyBall;
+luckyBall = Math.floor(Math.random() * 17) + 1;
+document.write(luckyBall);
+</script>
+
+<h4>Random Numbers between 1 and 48: Sorted</h4>
+<script language = "javascript">
+var numbers = [demo1, demo2, demo3, demo4, demo5];
+numbers.sort(function(a, b){return a - b});
+for (i = 0; i < 5; i++) {
+	document.write(numbers[i] + " ");
+}
+</script>
+
+
 
 </body>
 </html>
+
