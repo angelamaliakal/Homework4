@@ -95,13 +95,13 @@ var fries = {name: "French Fries", price: 2.00};
 var drinks = {name: "Drinks", price: 1.50};
 var menu = [hotdogs, fries, drinks];
 document.getElementById("display4").innerHTML = hotdogs.price;
-document.getElementById("display5").innerHTML = menu[1];
+document.getElementById("display5").innerHTML = menu[1].name;
 var hotdogsQuant = {name: "Hotdogs Ordered", amount: 0};
 var friesQuant = {name: "French Fries Ordered", amount: 0};
 var drinksQuant = {name: "Drinks Ordered", amount: 0};
-var Quantity = {hotdogsQuant, friesQuant, drinksQuant};
+var Quantity = [hotdogsQuant, friesQuant, drinksQuant];
 document.getElementById("display6").innerHTML = hotdogsQuant.amount;
-document.getElementById("display7").innerHTML = Quantity[2];
+document.getElementById("display7").innerHTML = Quantity[2].name;
 </script>
 
 </body>
