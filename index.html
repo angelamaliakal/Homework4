@@ -47,18 +47,31 @@ for (i = 0; i < 5; i++) {
   Input your Lucky Number:<br>
   <input type="text" name="Lucky Number" id="luckyNum">
   <br>
-  <input type="button" value="Submit" id= "submit" onClick= "calcPayout">
+  <input type="button" value="Submit" id= "submit" onClick= "NumInput">
 </form>
 
 <h4>Total Payout</h4>
 <script language = "javascript">
-var randomNum = document.getElementId('randomNum').value;
-function calcPayout()
+var randomNum = document.getElementById('randomNum').value;
+function NumInput()
 {
-    
+   var inputNum = document.getElementById("Random Number").value;
+   document.getElementById("display").innerHTML = inputNum;
+   var numArray = inputNum.split(" ").map(Number);
+   for (i=0; i<5; i++) {
+       numArray[i] = parseInt(numArray[i]);
+   document.getElementById("display2").innerHTML = numArray[0];
+   document.getElementById("display3").innerHTML = numArray[1];
 }
 </script>
 
+	<p><span>display</span>
+		<br>
+		<span>display2</span>
+		<br>
+		<span>display3</span>
+	</p>
+		
 </body>
 </html>
 
