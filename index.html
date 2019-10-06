@@ -1,7 +1,23 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+<head>
+<script language = "javascript">
+var randomNum = document.getElementById('randomNum').value;
+function NumInput()
+{
+   var inputNum = document.getElementById("Random Number").value;
+   document.getElementById("display").innerHTML = inputNum;
+   var numArray = inputNum.split(" ").map(Number);
+   for (i=0; i<5; i++) {
+       numArray[i] = parseInt(numArray[i]);
+   document.getElementById("display2").innerHTML = numArray[0];
+   document.getElementById("display3").innerHTML = numArray[1];
+}
+}
+</script>
+<title>Random Num Generator</title>
+</head>
 <h2>JavaScript Math</h2>
 
 <h4>Random Numbers between 1 and 48: Unsorted</h4>
@@ -51,21 +67,6 @@ for (i = 0; i < 5; i++) {
 </form>
 
 <h4>Total Payout</h4>
-<script language = "javascript">
-var randomNum = document.getElementById('randomNum').value;
-function NumInput()
-{
-   var inputNum = document.getElementById("Random Number").value;
-   document.getElementById("display").innerHTML = inputNum;
-   var numArray = inputNum.split(" ").map(Number);
-   for (i=0; i<5; i++) {
-       numArray[i] = parseInt(numArray[i]);
-   document.getElementById("display2").innerHTML = numArray[0];
-   document.getElementById("display3").innerHTML = numArray[1];
-}
-}
-</script>
-
 	<p><span id=display></span>
 		<br>
 		<span id=display2></span>
