@@ -21,25 +21,25 @@ function OrderInput()
    order[0].amount = document.getElementById("hotdogsOrdered").value;
    order[1].amount = document.getElementById("friesOrdered").value;
    order[2].amount = document.getElementById("drinksOrdered").value;
-   document.getElementById("display8").innerHTML = "Your total:";
-   document.getElementById("display9").innerHTML = order[0].amount + " " + order[0].name;
-   document.getElementById("display10").innerHTML = order[1].amount + " " + order[1].name;
-   document.getElementById("display11").innerHTML = order[2].amount + " " + order[2].name;
-
-   var subTotal = parseFloat((menu[0].price * parseInt(order[0].amount)) + (menu[1].price * parseInt(order[1].amount)) + (menu[2].price * parseInt(order[2].amount)))
-   var discount = parseFloat((subtotal / 10).toFixed(2));
-   var tax = parseFloat((subtotal * 0.0625).toFixed(2));
-   var orderTotal = ((subtotal - discount) + tax).toFixed(2);
-   document.getElementById("display12").innerHTML = "Subtotal: $" + subtotal;
-   if (subtotal >= 20) {
-   document.getElementById("display13").innerHTML = "Joe's special discount: -$" + discount;
-   }
-   document.getElementById("display14").innerHTML = "Tax: $" + tax;
-   document.getElementById("display15").innerHTML = "Total: $" + orderTotal;
-   }
-}	
-</
-	>
+        document.getElementById("display8").innerHTML = "Your total:";
+        document.getElementById("display9").innerHTML = order[0].amount + " " + order[0].name;
+        document.getElementById("display10").innerHTML = order[1].amount + " " + order[1].name;
+        document.getElementById("display11").innerHTML = order[2].amount + " " + order[2].name;
+        var subtotal = parseFloat((menu[0].price * parseInt(order[0].amount)) + (menu[1].price * parseInt(order[1].amount)) + (menu[2].price * parseInt(order[2].amount)))
+        var discount = 0;
+        var tax = parseFloat((subtotal * 0.0625).toFixed(2));
+        document.getElementById("display12").innerHTML = "Subtotal: $" + subtotal;
+        if (subtotal >= 20) {
+          discount = parseFloat((subtotal / 10).toFixed(2));
+          document.getElementById("display13").innerHTML = "<br>Joe's special discount: -$" + discount + "<br>";
+        } else {
+          document.getElementById("display13").innerHTML = "";
+        }
+        document.getElementById("display14").innerHTML = "Tax: $" + tax;
+        var orderTotal = ((subtotal - discount) + tax).toFixed(2);
+        document.getElementById("display15").innerHTML = "Total: $" + orderTotal;
+      }
+</script>
 <title>Random Num Generator</title>
 </head>
 <h2>JavaScript Math</h2>
