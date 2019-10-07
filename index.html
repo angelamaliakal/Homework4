@@ -26,7 +26,7 @@ function OrderInput()
    document.getElementById("display10").innerHTML = order[1].amount + " " + order[1].name;
    document.getElementById("display11").innerHTML = order[2].amount + " " + order[2].name;
 
-   var subTotal = = parseFloat((menu[0].price * parseInt(order[0].amount)) + (menu[1].price * parseInt(order[1].amount)) + (menu[2].price * parseInt(order[2].amount)))
+   var subTotal = parseFloat((menu[0].price * parseInt(order[0].amount)) + (menu[1].price * parseInt(order[1].amount)) + (menu[2].price * parseInt(order[2].amount)))
    var discount = parseFloat((subtotal / 10).toFixed(2));
    var tax = parseFloat((subtotal * 0.0625).toFixed(2));
    var orderTotal = ((subtotal - discount) + tax).toFixed(2);
