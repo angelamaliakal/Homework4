@@ -21,7 +21,13 @@ function OrderInput()
    order[0].amount = document.getElementById("hotdogsOrdered").value;
    order[1].amount = document.getElementById("friesOrdered").value;
    order[2].amount = document.getElementById("drinksOrdered").value;
-	
+   document.getElementById("display8").innerHTML = "Your total:";
+   document.getElementById("display9").innerHTML = order[0].amount + " " + order[0].name;
+   document.getElementById("display10").innerHTML = order[1].amount + " " + order[1].name;
+   document.getElementById("display11").innerHTML = order[2].amount + " " + order[2].name;
+
+   var subTotal = = parseFloat((menu[0].price * parseInt(order[0].amount)) + (menu[1].price * parseInt(order[1].amount)) + (menu[2].price * parseInt(order[2].amount)))
+   
 }	
 </script>
 <title>Random Num Generator</title>
@@ -124,7 +130,22 @@ document.getElementById("display7").innerHTML = Quantity[2].name;
   <br>
   <input type="button" value="Submit" id= "submit" onClick= "return OrderInput()">
 </form>
-	
+<h2 id="display8"></h2>
+<p>
+<span id="display9"></span>
+<br>
+<span id="display10"></span>
+<br>
+<span id="display11"></span>
+<br>
+<span id="display12"></span>
+<br>
+<span id="display13"></span>
+<br>
+<span id="display14"></span>
+<br>
+<span id="display15"></span>
+</p>
 </body>
 </html>
 
