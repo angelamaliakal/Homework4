@@ -17,6 +17,11 @@ function NumInput()
 }
 function OrderInput()
 {
+   var order = [hotdogsQuant, friesQuant, drinksQuant]
+   order[0].amount = document.getElementById("hotdogsOrdered").value;
+   order[1].amount = document.getElementById("friesOrdered").value;
+   order[2].amount = document.getElementById("drinksOrdered").value;
+	
 }	
 </script>
 <title>Random Num Generator</title>
@@ -109,13 +114,13 @@ document.getElementById("display7").innerHTML = Quantity[2].name;
 <h4>Fill out the Order Form</h4>
 <form>
   Number of Hotdogs:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-  <input type="number" name="quantity" min="1" max="100">
+  <input type="number" name="hotdogsOrdered" min="1" max="100">
   <br>
   Number of French Fries:
-  <input type="number" name="quantity" min="1" max="100">
+  <input type="number" name="friesOrdered" min="1" max="100">
   <br>
   Number of Drinks:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-  <input type="number" name="quantity" min="1" max="100">
+  <input type="number" name="drinksOrdered" min="1" max="100">
   <br>
   <input type="button" value="Submit" id= "submit" onClick= "return OrderInput()">
 </form>
