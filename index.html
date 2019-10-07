@@ -87,7 +87,7 @@ for (i = 0; i < 5; i++) {
   Input your Lucky Number:<br>
   <input type="text" name="Lucky Number" id="luckyNum">
   <br>
-  <input type="button" value="Submit" id= "submit" onClick= "return NumInput()">
+  <input type="button" value="Submit" id= "submit" onClick= "return NumInput();">
 </form>
 
 <h4>Total Payout</h4>
@@ -101,44 +101,29 @@ for (i = 0; i < 5; i++) {
 <br><br><br><br>
 
 <h1>Part 2 HW 4</h1>
-<p>
-<span id="display4"></span>
-</p>
-<p>
-<span id="display5"></span>
-</p>
-<p>
-<span id="display6"></span>
-</p>
-<p>
-<span id="display7"></span>
-</p>
+
 <script language="javascript">
-var hotdogs = {name: "Hotdogs", price: 3.25};
-var fries = {name: "French Fries", price: 2.00};
-var drinks = {name: "Drinks", price: 1.50};
-var menu = [hotdogs, fries, drinks];
-document.getElementById("display4").innerHTML = hotdogs.price;
-document.getElementById("display5").innerHTML = menu[1].name;
+var menuHotdogs = {name: "Hotdogs", price: 3.25};
+var menuFries = {name: "French Fries", price: 2.00};
+var menuDrinks = {name: "Drinks", price: 1.50};
+var menu = [menuHotdogs, menuFries, menuDrinks];
 var hotdogsQuant = {name: "Hotdogs Ordered", amount: 0};
 var friesQuant = {name: "French Fries Ordered", amount: 0};
 var drinksQuant = {name: "Drinks Ordered", amount: 0};
-var Quantity = [hotdogsQuant, friesQuant, drinksQuant];
-document.getElementById("display6").innerHTML = hotdogsQuant.amount;
-document.getElementById("display7").innerHTML = Quantity[2].name;
 </script>
+	
 <h4>Fill out the Order Form</h4>
 <form>
   Number of Hotdogs:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-  <input type="number" name="hotdogsOrdered" min="1" max="100">
+  <input type="number" name="hotdogsOrdered" id="hotdogsOrdered" min="1" max="100">
   <br>
   Number of French Fries:
-  <input type="number" name="friesOrdered" min="1" max="100">
+  <input type="number" name="friesOrdered" id="friesOrdered" min="1" max="100">
   <br>
   Number of Drinks:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-  <input type="number" name="drinksOrdered" min="1" max="100">
+  <input type="number" name="drinksOrdered" id="drinksOrdered" min="1" max="100">
   <br>
-  <input type="button" value="Submit" id= "submit" onClick= "return OrderInput()">
+  <input type="button" value="Submit" id= "submit" onClick= "return OrderInput();">
 </form>
 <h2 id="display8"></h2>
 <p>
