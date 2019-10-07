@@ -103,7 +103,18 @@ var Quantity = [hotdogsQuant, friesQuant, drinksQuant];
 document.getElementById("display6").innerHTML = hotdogsQuant.amount;
 document.getElementById("display7").innerHTML = Quantity[2].name;
 </script>
-
+<h4>Fill out the Order Form</h4>
+<form>
+  Number of Hotdogs:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <input type="number" name="quantity" min="1" max="100">
+  <br>
+  Number of French Fries:
+  <input type="number" name="quantity" min="1" max="100">
+  <br>
+  Number of Drinks:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <input type="number" name="quantity" min="1" max="100">
+</form>
+	
 </body>
 </html>
 
