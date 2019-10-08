@@ -2,37 +2,30 @@
 <html>
 <head>
 <h1>Part 1 HW 4</h1>
-<script language = "javascript">
-      function numInput()
-      {
-        var inputRaw = document.getElementById("numbersInput").value;
+<script language="javascript">
+	function numInput() {
+    	var inputRaw = document.getElementById("numbersInput").value;
         var inputArray = inputRaw.split(" ").map(Number);
-        for (i = 0; i < 5; i++)
-        {
-          inputArray[i] = parseInt(inputArray[i]);
-        }
+        	for (i = 0; i < 5; i++) {
+            	inputArray[i] = parseInt(inputArray[i]);
+            	}
         var inputLucky = Number(document.getElementById("luckyInput").value);
         var luckyMatch = false;
-        if (inputLucky == luckyNum)
-        {
+		if (inputLucky == luckyNum) {
           luckyMatch = true;
         }
         var matches = 0;
-        for (i = 0; i < 5; i++)
-        {
-          for (j = 0; j < 5; j++)
-          {
-            if (inputArray[i] == numbers[j])
-            {
+        for (i = 0; i < 5; i++) {
+          for (j = 0; j < 5; j++) {
+            if (inputArray[i] == numbers[j]) {
               matches++;
             }
           }
         }
         var payout;
-        if (luckyMatch == true)
-        { //lucky ball match
-          switch (matches)
-          {
+ // Lucky Input matches value
+        if (luckyMatch == true) {
+          switch (matches) {
             case 0:
               payout = 4;
               break;
@@ -49,13 +42,12 @@
               payout = 5000;
               break;
             case 5:
-              payout = "7000 a WEEK for LIFE";
+              payout = "7,000 a week for life!";
               break;
           }
-        } else
-        { //no lucky ball match
-          switch (matches)
-          {
+        } else {
+// Lucky Ball does not match payout
+          switch (matches) {
             case 0:
               payout = 0;
               break;
@@ -72,11 +64,11 @@
               payout = 200;
               break;
             case 5:
-              payout = "25000 a YEAR for LIFE";
+              payout = "25,000 a year for life!";
               break;
           }
         }
-        document.getElementById("displayPayout").innerHTML = "Your payout: $" + payout;
+        document.getElementById("displayPayout").innerHTML = "Your payout= $" + payout;
       }
 function OrderInput()
 {
@@ -105,7 +97,7 @@ function OrderInput()
 </script>
 <title>Random Num Generator</title>
 </head>
-
+	
 <body>
 <h2>JavaScript Math</h2>
     <script language="javascript">
@@ -128,18 +120,19 @@ function OrderInput()
         document.write(numbers[i] + " ");
       }
     </script>
+<h3>First five numbers (sorted): <br></h3>
+    <script language="javascript">
+    numbers.sort(function(a, b) { return a - b; });
+    	for (i = 0; i < 5; i++) {
+        document.write(numbers[i] + " ");
+      	}
+    </script>
     <h3>Lucky number: <br></h3>
     <script language="javascript">
       document.write(luckyNum);
-      numbers.sort(function(a, b) { return a - b; });
     </script>
-    <h3>First five numbers (sorted): <br></h3>
-    <script language="javascript">
-      for (i = 0; i < 5; i++)
-      {
-        document.write(numbers[i] + " ");
-      }
-    </script>
+
+
     <br><br><br>
     <form>
       <h2>Your numbers:</h2>
