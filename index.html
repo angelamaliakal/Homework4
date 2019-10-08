@@ -3,20 +3,21 @@
 <head>
 <h1>Part 1 HW 4</h1>
 <script language = "javascript">
-function NumInput()
-{
-   var inputNum = document.getElementById("randomNum").value;
-   var numArray = inputNum.split(" ").map(Number);
-   for (i=0; i<5; i++) {
-       numArray[i] = parseInt(numArray[i]);
-   }
-   var inputLucky = Number(document.getElementById("luckyNum").value);
-   var luckyMatch = false;
-   		if (inputLucky == luckyNum)
+      function numInput()
+      {
+        var inputRaw = document.getElementById("numbersInput").value;
+        var inputArray = inputRaw.split(" ").map(Number);
+        for (i = 0; i < 5; i++)
+        {
+          inputArray[i] = parseInt(inputArray[i]);
+        }
+        var inputLucky = Number(document.getElementById("luckyInput").value);
+        var luckyMatch = false;
+        if (inputLucky == luckyNum)
         {
           luckyMatch = true;
         }
-   var matches = 0;
+        var matches = 0;
         for (i = 0; i < 5; i++)
         {
           for (j = 0; j < 5; j++)
@@ -27,9 +28,9 @@ function NumInput()
             }
           }
         }
-       var payout;
+        var payout;
         if (luckyMatch == true)
-        {
+        { //lucky ball match
           switch (matches)
           {
             case 0:
@@ -52,7 +53,7 @@ function NumInput()
               break;
           }
         } else
-        {
+        { //no lucky ball match
           switch (matches)
           {
             case 0:
@@ -107,56 +108,56 @@ function OrderInput()
 
 <body>
 <h2>JavaScript Math</h2>
+    <script language="javascript">
+      var numbers = []
+      while(numbers.length < 5)
+      {
+        var num = Math.floor(Math.random() * 47 + 1);
+        if (numbers.indexOf(num) === -1)
+        {
+          numbers.push(num);
+        }
+      }
+      luckyNum = Math.floor(Math.random() * 17 + 1);
+    </script>
+   
+<h2>Lottery numbers</h2>
+<h3>First five (unordered): <br></h3>
+    <script language="javascript">
+      for (i = 0; i < 5; i++) {
+        document.write(numbers[i] + " ");
+      }
+    </script>
+    <h3>Lucky number: <br></h3>
+    <script language="javascript">
+      document.write(luckyNum);
+      numbers.sort(function(a, b) { return a - b; });
+    </script>
+    <h3>First five numbers (sorted): <br></h3>
+    <script language="javascript">
+      for (i = 0; i < 5; i++)
+      {
+        document.write(numbers[i] + " ");
+      }
+    </script>
+    <br><br><br>
+    <form>
+      <h2>Your numbers:</h2>
+      <h4>Please enter 5 numbers between 1 and 48:<br></h4>
+      <input type="text" name="numbersInput" id="numbersInput">
+      <h4>Please enter your lucky number:<br></h4>
+      <input type="text" name="luckyInput" id="luckyInput">
+      <br><br>
+      <input type="button" value="Submit" id="submit" onclick="return numInput();">
+      <br>
+    </form>
+    <p>
+      <span id="displayPayout"></span>
+    </p>
 
-<h4>Random Numbers between 1 and 48: Unsorted</h4>
-<script language = "javascript">
-var demo1, demo2, demo3, demo4, demo5;
-demo1 = Math.floor(Math.random() * 47 + 1);
-demo2 = Math.floor(Math.random() * 47 + 1);
-demo3 = Math.floor(Math.random() * 47 + 1);
-demo4 = Math.floor(Math.random() * 47 + 1);
-demo5 = Math.floor(Math.random() * 47 + 1);
-
-var numbers = [demo1, demo2, demo3, demo4, demo5];
-for (i = 0; i < 5; i++) {
-document.write(numbers[i] + " ");
-}
-</script>
-
-<h4>LuckyBall Number</h4>
-<script language = "javascript">
-var luckyBall;
-luckyBall = Math.floor(Math.random() * 17) + 1;
-document.write(luckyBall);
-</script>
-
-<h4>Random Numbers between 1 and 48: Sorted</h4>
-<script language = "javascript">
-var numbers = [demo1, demo2, demo3, demo4, demo5];
-numbers.sort(function(a, b){return a - b});
-for (i = 0; i < 5; i++) {
-	document.write(numbers[i] + " ");
-}
-</script>
-
-<h4>Input Your Numbers</h4>
-<form>
-  Input 5 Random Numbers:<br>
-  <input type="text" name = "randomNum" id="randomNum">
-  <br>
-  <br>
-  Input your Lucky Number:<br>
-  <input type="text" name="luckyNum" id="luckyNum">
-  <br>
-  <input type="button" value="Submit" id="submit" onclick="return NumInput();">
-</form>
-<h4>Total Payout:</h4>
-<p>
-<span id="displayPayout"></span>
-<br>
-</p>
-
-<br><br><br><br>
+    <br><br><br><br>
+  </body>
+</html>
 
 
 <h1>Part 2 HW 4</h1>
