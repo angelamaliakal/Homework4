@@ -104,6 +104,7 @@ function OrderInput()
 </script>
 <title>Random Num Generator</title>
 </head>
+
 <body>
 <h2>JavaScript Math</h2>
 
@@ -118,7 +119,7 @@ demo5 = Math.floor(Math.random() * 47 + 1);
 
 var numbers = [demo1, demo2, demo3, demo4, demo5];
 for (i = 0; i < 5; i++) {
-	document.write(numbers[i] + " ");
+document.write(numbers[i] + " ");
 }
 </script>
 
@@ -140,30 +141,23 @@ for (i = 0; i < 5; i++) {
 
 <h4>Input Your Numbers</h4>
 <form>
-  Input your 5 Random Numbers:<br>
-  <input type="text" name = "Random Number" id="randomNum">
+  Input 5 Random Numbers:<br>
+  <input type="text" name = "randomNum" id="randomNum">
   <br>
   <br>
   Input your Lucky Number:<br>
-  <input type="text" name="Lucky Number" id="luckyNum">
+  <input type="text" name="luckyNum" id="luckyNum">
   <br>
-  <button type="button" onclick="NumInput()">Submit</button>
+  <input type="button" value="Submit" id="submit" onclick="return NumInput();">
 </form>
-
-
-<h4>Display Numbers</h4>
-<p><span id="display1"></span>
-<br>
-<span id="display2"></span>
-<br>
-<span id="display3"></span>
-</p>
-
-<h4>Total Payout</h4>
+<h4>Total Payout:</h4>
+<p>
 <span id="displayPayout"></span>
 <br>
+</p>
 
 <br><br><br><br>
+
 
 <h1>Part 2 HW 4</h1>
 
